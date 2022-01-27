@@ -1,0 +1,20 @@
+﻿
+
+@model Projecore.Models.Firma
+@{
+    ViewData["Title"] = "YeniFirma";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+
+    <b>Firma Adı</b>
+    @Html.TextBoxFor(x => x.firma_adi,new{@case ="form-control"})
+    <br />
+    <b>Mernis Kontrol</b>
+    @Html.TextBoxFor(x => x.mernis_kontrol,new{@case ="form-control"})
+    <br />
+    <button class="button btn-info">Firma ekle</button>
+
+</form>
+

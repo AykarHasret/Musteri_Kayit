@@ -1,0 +1,22 @@
+﻿@model Projecore.Models.Firma
+@{
+    ViewData["Title"] = "FirmaGetir";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+<br />
+@using(Html.BeginForm("FİrmaGuncelle","Firmalar",FormMethod.Post))
+{
+    <b>Firma ID</b>
+    @Html.TextBoxFor(x=>x.id,new{@class ="form-control"})
+    <br />
+    <b>Firma Adı</b>
+    @Html.TextBoxFor(x=>x.firma_adi,new{@class ="form-control"})
+    <br />
+    <b>Firma mernis kontrol</b>
+    @Html.TextBoxFor(x=>x.mernis_kontrol,new{@class ="form-control"})
+    <br />
+
+    <button class="btn btn-default">Firma Güncelle</button>
+
+}
+

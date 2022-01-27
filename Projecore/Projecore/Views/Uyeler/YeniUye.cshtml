@@ -1,0 +1,36 @@
+﻿@model Projecore.Models.Uyeler
+@{
+    ViewData["Title"] = "YeniUye";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<h1>YeniUye</h1>
+
+<form class="form-group" method="post">
+    <b>Tc kimlik</b>
+    @Html.TextBoxFor(x => x.tc,new{@case ="form-control"})
+    <br />
+    <b>Uye Adı</b>
+    @Html.TextBoxFor(x => x.ad,new{@case ="form-control"})
+    <br />
+    <b>Uye Soyadı</b>
+    @Html.TextBoxFor(x => x.soyad,new{@case ="form-control"})
+    <br />
+    
+
+    <b>Doğum tarihi</b><br>
+    <input type="date" name="dogumYil"><br>
+
+
+
+
+    <b>Telefon</b>
+    @Html.TextBoxFor(x => x.telefon,new{@case ="form-control"})
+    <br />
+    <b>Mail</b>
+    @Html.TextBoxFor(x => x.mail,new{@case ="form-control"})
+    <br />
+    @Html.DropDownListFor(x=>x.Firma.id,(List<SelectListItem>)ViewBag.dgr,new{@class="form-control"})
+
+    <button class="button btn-info">Uye ekle</button>
+</form>
